@@ -1,0 +1,25 @@
+.page-bg-3{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.img-bg-3{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+}
+.title-3{
+       width: 13rem;
+       position: absolute;
+       left: 7.0rem;
+       top: 2.6rem;
+}
+
+.font-3{
+    width: 84%;
+    position: absolute;
+    left: 8%;
+    top: 14.7rem;
+}

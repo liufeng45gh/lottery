@@ -1,0 +1,19 @@
+.page-bg-2{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.img-bg-2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+}
+
+.font-2{
+    width: 24.3rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+}

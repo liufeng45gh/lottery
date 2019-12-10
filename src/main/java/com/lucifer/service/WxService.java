@@ -4,10 +4,11 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import com.lucifer.dao.WxUserDao;
-import com.lucifer.exception.ArgumentException;
 import com.lucifer.exception.NotLoginException;
 import com.lucifer.exception.WxAuthenticationException;
 
+import com.lucifer.mapper.MemberMapper;
+import com.lucifer.model.Member;
 import com.lucifer.model.WxInfo;
 import com.lucifer.utils.Constant;
 
@@ -54,6 +55,9 @@ public class WxService {
     final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private ObjectMapper objectMapper = new ObjectMapper();
+
+    @Resource
+    MemberMapper memberMapper;
 
     @PostConstruct
     public void init(){
@@ -118,13 +122,18 @@ public class WxService {
 
     public void loginByCode(String code,  HttpServletResponse response) throws JSONException, WxAuthenticationException, IOException {
         WxInfo wxInfo = this.getWxInfo(code);
-        WxInfo dbWxInfo = wxUserDao.getWxUserByWxId(wxInfo.getWxId());
-        if (null == dbWxInfo) {
-            wxUserDao.insertWxUser(wxInfo);
+        Member member = memberMapper.getMemberByWxId(wxInfo.getWxId());
+        //WxInfo dbWxInfo = wxUserDao.getWxUserByWxId(wxInfo.getWxId());
+        if (null == member) {
+            member = new Member();
+            member.setAvatar(wxInfo.getAvatar());
+            member.setWxId(wxInfo.getWxId());
+            member.setNickName(wxInfo.getNickName());
+            memberMapper.insertMember(member);
         }
         String token = UUID.randomUUID().toString();
         //stringRedisTemplate.opsForValue().set(Constant.CACHE_KEY_PERSISTENCE_TOKEN_PRE+token,wxInfo.getWxId());
-        this.setToken(token,wxInfo.getWxId());
+        this.setToken(token,member.getId());
         Cookie c2 = new Cookie("token",token);
 //设置生命周期为1小时，秒为单位
         c2.setPath("/");
@@ -132,8 +141,8 @@ public class WxService {
         response.addCookie(c2);
     }
 
-    public void setToken(String token,String id){
-        stringRedisTemplate.opsForValue().set(Constant.CACHE_KEY_PERSISTENCE_TOKEN_PRE+token,id);
+    public void setToken(String token,Long id){
+        stringRedisTemplate.opsForValue().set(Constant.CACHE_KEY_PERSISTENCE_TOKEN_PRE+token,String.valueOf(id));
     }
     public String getIdByToken(String token){
         return stringRedisTemplate.opsForValue().get(Constant.CACHE_KEY_PERSISTENCE_TOKEN_PRE+token);

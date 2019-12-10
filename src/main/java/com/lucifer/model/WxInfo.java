@@ -1,8 +1,12 @@
 package com.lucifer.model;
 
+import lombok.Data;
+
 /**
  * Created by Administrator on 2017/6/24.
  */
+
+@Data
 public class WxInfo {
 
     private String accessToken;
@@ -19,37 +23,4 @@ public class WxInfo {
 
 
 
-
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
-
-    public String getAccessToken() {
-        return accessToken;
-    }
-
-    public void setAccessToken(String accessToken) {
-        this.accessToken = accessToken;
-    }
-
-    public String getWxId() {
-        return wxId;
-    }
-
-    public void setWxId(String wxId) {
-        this.wxId = wxId;
-    }
 }

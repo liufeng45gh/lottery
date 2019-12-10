@@ -17,6 +17,8 @@ public interface MemberMapper {
 
     Member getMemberById(@Param("id") Long id);
 
+    Member getMemberByWxId(@Param("wxId") String wxId);
+
     void updateMemberInfo(Member member);
 
     String getSysConfigValue(@Param("key") String key);

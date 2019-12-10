@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 public class MemberService {
 
     final Logger logger = LoggerFactory.getLogger(this.getClass());
-    
+
     @Resource
     private MemberMapper memberMapper;
 

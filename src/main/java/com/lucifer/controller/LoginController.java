@@ -1,7 +1,7 @@
 package com.lucifer.controller;
 
 import com.lucifer.mapper.MemberMapper;
-import com.lucifer.service.MemberLoginService;
+import com.lucifer.service.MemberService;
 import com.lucifer.utils.Result;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginController {
 
     @Resource
-    MemberLoginService memberLoginService;
+    MemberService memberLoginService;
 
     @Resource
     MemberMapper memberMapper;

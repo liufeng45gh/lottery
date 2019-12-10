@@ -124,7 +124,7 @@ public class WxService {
         }
         String token = UUID.randomUUID().toString();
         //stringRedisTemplate.opsForValue().set(Constant.CACHE_KEY_PERSISTENCE_TOKEN_PRE+token,wxInfo.getWxId());
-        this.writeToken(token,wxInfo.getWxId());
+        this.setToken(token,wxInfo.getWxId());
         Cookie c2 = new Cookie("token",token);
 //设置生命周期为1小时，秒为单位
         c2.setPath("/");
@@ -132,10 +132,10 @@ public class WxService {
         response.addCookie(c2);
     }
 
-    public void writeToken(String token,String wxId){
-        stringRedisTemplate.opsForValue().set(Constant.CACHE_KEY_PERSISTENCE_TOKEN_PRE+token,wxId);
+    public void setToken(String token,String id){
+        stringRedisTemplate.opsForValue().set(Constant.CACHE_KEY_PERSISTENCE_TOKEN_PRE+token,id);
     }
-    public String getWxIdByToken(String token){
+    public String getIdByToken(String token){
         return stringRedisTemplate.opsForValue().get(Constant.CACHE_KEY_PERSISTENCE_TOKEN_PRE+token);
     }
 
@@ -143,7 +143,7 @@ public class WxService {
         if (StringHelper.isEmpty(token)) {
             throw new NotLoginException("token is null");
         }
-        String userId = this.getWxIdByToken(token);
+        String userId = this.getIdByToken(token);
         if (StringHelper.isEmpty(userId)) {
             throw new NotLoginException("can not find user by token" + token);
         }

@@ -3,7 +3,7 @@ package com.lucifer.controller;
 import com.lucifer.exception.ArgumentException;
 import com.lucifer.exception.UnexpectedException;
 import com.lucifer.model.Member;
-import com.lucifer.service.MemberLoginService;
+import com.lucifer.service.MemberService;
 import com.lucifer.utils.Constant;
 import com.lucifer.utils.Result;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 public class MemberController {
 
     @Resource
-    MemberLoginService memberLoginService;
+    MemberService memberLoginService;
 
     @RequestMapping(value = "/user-info",method = RequestMethod.GET)
     public String showUserInfo(){

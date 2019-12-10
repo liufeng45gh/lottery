@@ -22,12 +22,16 @@ public class Constant {
 	public static final String KEY_WX_JSAPI_TICKET = "EXAM:KEY-WX-JSAPI-TICKET";
 
 
-	
+	public static final String CACHE_KEY_PERSISTENCE_TOKEN_PRE = "LOTTERY:PERSISTENCE:TOKEN:";
 
 
 
 
-			
-			
-	
+
+
+
+
+
+
+
 }

@@ -6,11 +6,8 @@
 <mapper namespace="com.lucier.model">
     <resultMap type="com.lucifer.model.WxInfo" id="WxInfoMap">
         <result column="wx_id" property="wxId"/>
-
         <result column="nick_name" property="nickName"/>
         <result column="avatar" property="avatar"/>
-
-      
     </resultMap>
     <insert id="insertWxUser">
         insert into user

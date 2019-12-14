@@ -3,7 +3,7 @@ server:
    resetCache: true
 spring:
   redis:
-    host: www.haifuc.cn
+    host: localhost
     port: 6379
     password: lucifer-hfc
 # DATASOURCE

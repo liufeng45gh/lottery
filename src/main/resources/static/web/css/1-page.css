@@ -2,6 +2,7 @@
     height: 100%;
     width: 100%;
     position: relative;
+    background: #a6f6ff;
 }
 
 .img-bg-1{
@@ -11,11 +12,42 @@
     left: 0px;
 }
 
-.logo-1{
-    width: 2.3rem;
+.title-1{
+    width: 76%;
     position: absolute;
-    left: 1rem;
-    top: 1rem;
+    left: 12%;
+    top: 1.3rem;
+}
+
+.ship{
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 10.3rem;
+}
+
+.process-bg{
+    width: 92%;
+
+    position: absolute;
+    left: 4%;
+    top: 37rem;
+}
+
+.process-front{
+    width: 30%;
+    position: absolute;
+    left: 4%;
+    top: 37rem;
+    height: 1rem;
+}
+
+
+.loading{
+       width: 9rem;
+       position: absolute;
+       left: 8rem;
+       top: 39.3rem;
 }
 
 .font-1{
@@ -55,29 +87,9 @@
        bottom: 1rem;
 }
 
-.title-1{
-  color: #FC9F06;
-  font-size: 1.4rem;
-  -webkit-text-stroke: 0.005rem white;
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  top: 9rem;
-  font-weight: bold!important;
-  transition: all .1s linear;
-}
 
-.title-2{
-    color: #FC9F06;
-    font-size: 1.4rem;
-    -webkit-text-stroke: 0.005rem white;
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    top: 11.5rem;
-    font-weight: bold!important;
-    transition: all .1s linear;
-}
+
+
 
 .title-3{
     color: #3385ff;
@@ -85,7 +97,7 @@
     text-align: center;
     width: 100%;
     position: absolute;
-    top: 19rem;
+    top: 119rem;
     font-weight: bold;
     transition: all .1s linear;
 }
@@ -97,7 +109,7 @@
     text-align: center;
     width: 100%;
     position: absolute;
-    top: 23rem;
+    top: 123rem;
     font-weight: bold;
     transition: all .1s linear;
 }

@@ -1,29 +1,16 @@
 <link rel="stylesheet" href="/web/css/1-page.css"/>
 
 <div class="page-bg-1">
-    <img class="img-bg-1" src="/web/img/page1/bg.jpg"/>
-    <img class="logo-1" src="/web/img/page1/logo.png"/>
+    <img class="img-bg-1" src="/web/img/page1/bg.png"/>
+    <img class="title-1" src="/web/img/page1/title.png"/>
 
+    <img class="ship" src="/web/img/page1/ship.gif"/>
 
-    <div class="title-1" >
-        中国石油天然气销售分公司
-    </div>
-    <div class="title-2">
-        (昆仑能源有限公司)
-    </div>
+    <img class="process-bg" src="/web/img/page1/process-bg.png"/>
 
-    <div class="title-3">
-        “形式、目标 、任务、 责任 ”
-    </div>
-    <div class="title-4">
-        知识答题
-    </div>
+    <img class="process-front" src="/web/img/page1/process-front.png"/>
 
-    <div class="btn-1">
-        点击进入
-    </div>
-
-
+    <img class="loading" id="start-btn" src="/web/img/page1/loading.png"/>
 
 
 

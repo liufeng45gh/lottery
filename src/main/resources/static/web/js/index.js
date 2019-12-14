@@ -1,5 +1,13 @@
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+
+});
+
 $(document).ready(function(){
     //checkLogin();
+    $("#start-btn").click(function(){
+        swiper.slideTo(1);
+    });
 });
 
 function openWxLogin(){
@@ -33,3 +41,5 @@ function checkLogin() {
         //do nothing
     });
 }
+
+

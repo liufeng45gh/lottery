@@ -22,39 +22,26 @@
 <!-- Swiper -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide swiper-no-swiping">
             <#include "1-page.ftl">
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide swiper-no-swiping">
             <#include "2-page.ftl">
         </div>
-        <div class="swiper-slide">
+        <div class="swiper-slide swiper-no-swiping">
             <#include "3-page.ftl">
         </div>
 
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <div class="arrow-down" id="nextPage"></div>
-    <img class="hart" src="/img/hart.png"></img>
+
+
 </div>
 
-<audio id="bg-music1" controls="controls" autoplay="autoplay" style="display: none">
-    <source src="/music/tkzc.mp3" />
-</audio>
-<img id="music" class="play" style="visibility: visible; opacity: 1;" src="/img/music.png"></img>
+
+
 
 
 <!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper('.swiper-container', {
-      direction: 'vertical',
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  </script>
 
 <script src="/web/js/index.js?v=1.1"></script>
 

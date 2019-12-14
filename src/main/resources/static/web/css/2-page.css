@@ -2,13 +2,46 @@
     height: 100%;
     width: 100%;
     position: relative;
+    background: #fff4e8;
 }
 
-.img-bg-2{
-    height: 100%;
+.wish-loop-bg{
     width: 100%;
     position: absolute;
-    left: 0px;
+    left: 0rem;
+    top: 0rem;
+}
+.b2-5{
+    width: 100%;
+    position: absolute;
+    left: 0rem;
+    top: 1.8rem;
+}
+
+.p2-title{
+    width: 82%;
+    position: absolute;
+    left: 9%;
+    top: 1.8rem;
+}
+.baby{
+    width: 91%;
+    position: absolute;
+    left: 4.5%;
+    top: 10.8rem;
+}
+.wish-input{
+    width: 98%;
+    position: absolute;
+    left: 1%;
+    top: 28.5rem;
+}
+
+.p2-submit{
+    width: 32%;
+    position: absolute;
+    left: 34%;
+    top: 40.5rem;
 }
 
 .font-2{

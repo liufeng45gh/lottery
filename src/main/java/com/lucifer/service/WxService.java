@@ -149,6 +149,8 @@ public class WxService {
     }
 
     public Result checkLoin(String token) throws NotLoginException {
+
+        logger.info("token is {}",token);
         if (StringHelper.isEmpty(token)) {
             throw new NotLoginException("token is null");
         }

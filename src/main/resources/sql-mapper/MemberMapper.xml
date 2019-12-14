@@ -38,6 +38,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from member where id = #{id}
 	</select>
 
+	<select id="getMemberByWxId" resultMap="MemberMap">
+		select * from member where wx_id = #{wxId}
+	</select>
+
 	<update id="updateMemberInfo">
 		update member
 		set

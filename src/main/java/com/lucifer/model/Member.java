@@ -11,7 +11,7 @@ public class Member {
 
     private String wxId;
 
-    private String telephone;
+    private String phone;
 
     private String nickName;
 

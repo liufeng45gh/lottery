@@ -156,7 +156,7 @@ public class WxService {
         }
         String userId = this.getIdByToken(token);
         if (StringHelper.isEmpty(userId)) {
-            throw new NotLoginException("can not find user by token" + token);
+            throw new NotLoginException("can not find user by token  : " + token);
         }
         return Result.ok();
 

@@ -55,7 +55,7 @@
     });
   </script>
 
-<script src="/web/js/index.js?v=1.0"></script>
+<script src="/web/js/index.js?v=1.1"></script>
 
 
 </body>

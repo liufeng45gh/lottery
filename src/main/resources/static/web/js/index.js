@@ -16,7 +16,7 @@ function openWxLogin(){
 
 function checkLogin() {
 
-    var url = "/wx/check-login";
+    var url = "/wx/check-login?random="+Math.random();
     var data_send = {};
 
     var request =$.ajax({

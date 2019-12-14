@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>答题系统</title>
+    <title>今天，昆仑能源向您发出邀请</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 
     <!-- Link Swiper's CSS -->
@@ -16,43 +16,46 @@
     <script  type="text/javascript" src="/web/js/wx-share.js?version=1.0"></script>
     <script src="/web/js/common.js"></script>
 
-
 </head>
 <body>
 <!-- Swiper -->
-<link rel="stylesheet" href="/web/css/1-page.css"/>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <#include "1-page.ftl">
+        </div>
+        <div class="swiper-slide">
+            <#include "2-page.ftl">
+        </div>
+        <div class="swiper-slide">
+            <#include "3-page.ftl">
+        </div>
 
-<div class="page-bg-1">
-    <img class="img-bg-1" src="/web/img/page1/bg.jpg"/>
-    <img class="logo-1" src="/web/img/page1/logo.png"/>
-
-
-    <div class="title-1" >
-        中国石油天然气销售分公司
     </div>
-    <div class="title-2">
-        (昆仑能源有限公司)
-    </div>
-
-    <div class="title-3">
-        “形势、目标 、任务、 责任 ”
-    </div>
-    <div class="title-4">
-        知识答题
-    </div>
-
-    <a class="btn-1" style="display: block; " href="/mobile/login">
-        点击进入
-    </a>
-
-
-
-
-
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="arrow-down" id="nextPage"></div>
+    <img class="hart" src="/img/hart.png"></img>
 </div>
+
+<audio id="bg-music1" controls="controls" autoplay="autoplay" style="display: none">
+    <source src="/music/tkzc.mp3" />
+</audio>
+<img id="music" class="play" style="visibility: visible; opacity: 1;" src="/img/music.png"></img>
 
 
 <!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+<script src="/web/js/index.js?v=1.0"></script>
 
 
 </body>

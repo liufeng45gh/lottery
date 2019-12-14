@@ -43,10 +43,11 @@ public class WxConfigService {
     }
 
     @Scheduled(cron = "0 0 */1 * * ?")
-    @PostConstruct
+    //@PostConstruct
     public void refreshWxJsapiTicket() throws IOException {
           String accessToken =  this.getAccessToken();
           String jsapiTiket = this.getJsapiTicket(accessToken);
+          logger.info("jsapiTiket is : {}",jsapiTiket);
           if (!StringHelper.isEmpty(jsapiTiket)) {
               stringRedisTemplate.opsForValue().set(Constant.KEY_WX_JSAPI_TICKET,jsapiTiket);
           }

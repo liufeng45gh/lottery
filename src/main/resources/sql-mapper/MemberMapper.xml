@@ -19,9 +19,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	<insert id="insertMember" useGeneratedKeys="true" keyProperty="id">
 		insert into member
-		(wx_id,created_at,updated_at)
+		(wx_id,nick_name,avatar,created_at,updated_at)
 		values
-		(#{wxId}, now(), now())
+		(#{wxId}, #{nickName},#{avatar},now(), now())
 	</insert>
 	<insert id="insertMemberToken">
 		insert into m_access_token

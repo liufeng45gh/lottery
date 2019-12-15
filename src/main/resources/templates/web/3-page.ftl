@@ -2,9 +2,10 @@
 
 <div class="page-bg-3">
 
-<img class="title-3" src="/web/img/page3/title.gif"/>
+
 
 <img class="img-bg-3" src="/web/img/page3/bg.png"/>
+<img class="title-3" src="/web/img/page3/title.gif"/>
 <img class="my" src="/web/img/page3/my.png"/>
 <div class="my-text" id="my-text">我的中奖</div>
 

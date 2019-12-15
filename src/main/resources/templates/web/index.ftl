@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>官微三周年 幸运大转盘,每天三次机会,赢100元加油卡,超高中奖概率</title>
+    <title>官微三周年 寻找幸福的你</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 
     <!-- Link Swiper's CSS -->
@@ -26,13 +26,13 @@
 <!-- Swiper -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide swiper-no-swiping">
+        <div class="swiper-slide swiper-no-swiping" id = "swiper-slide-0">
             <#include "1-page.ftl">
         </div>
-        <div class="swiper-slide swiper-no-swiping">
+        <div class="swiper-slide swiper-no-swiping" id = "swiper-slide-1" style="display:none">
             <#include "2-page.ftl">
         </div>
-        <div class="swiper-slide swiper-no-swiping">
+        <div class="swiper-slide swiper-no-swiping" id = "swiper-slide-2" style="display:none">
             <#include "3-page.ftl">
         </div>
 

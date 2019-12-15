@@ -7,8 +7,8 @@ if(lineLink.indexOf("?") != -1)
     console.log(lineLink);
 }
 
-var shareContent = "官微三周年 幸运大转盘";
-var shareTitle = "每天三次机会,赢100元加油卡,超高中奖概率";
+var shareContent = "官微三周年 寻找幸福的你";
+var shareTitle = "一起来玩吧";
 var shareImgUrl = "http://question.stack.xin/web/img/share-icon.png";
 var appid = "wx1b792045969d2147";
   

@@ -26,4 +26,13 @@ public enum Award {
         this.totalCount= totalCount;
         this.rate = rate;
     }
+
+    public static Award getById(Integer id){
+        for (Award e : Award.values()) {
+            if(e.id.equals(id)) {
+                return e;
+            }
+        }
+        return null;
+    }
 }

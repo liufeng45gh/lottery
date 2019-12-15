@@ -16,6 +16,10 @@
 
     <script  type="text/javascript" src="/web/js/wx-share.js?version=1.0"></script>
     <script src="/web/js/common.js"></script>
+    <style>
+
+        body .layer-test{background: none; box-shadow: none;}
+    </style>
 
 </head>
 <body>

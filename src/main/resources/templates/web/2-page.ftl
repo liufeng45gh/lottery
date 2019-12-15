@@ -7,7 +7,7 @@
 <img class="p2-title" src="/web/img/page2/p2-title.png"/>
 <img class="baby" src="/web/img/page2/baby.gif"/>
 <img class="wish-input" src="/web/img/page2/wish-input.png"/>
-<img class="p2-submit" src="/web/img/page2/p2-submit.png"/>
+<img class="p2-submit" id="p2-submit" src="/web/img/page2/p2-submit.png"/>
 
 
 

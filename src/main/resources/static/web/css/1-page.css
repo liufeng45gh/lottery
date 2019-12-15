@@ -39,14 +39,14 @@
 
     position: absolute;
     left: 4%;
-    bottom: 5rem;
+    bottom: 2rem;
 }
 
 .process-front{
     width: 30%;
     position: absolute;
     left: 4%;
-    bottom: 5rem;
+    bottom: 2rem;
     height: 1rem;
 }
 
@@ -55,7 +55,7 @@
        width: 9rem;
        position: absolute;
        left: 8rem;
-       bottom: 7.3rem;
+       bottom: 5.0rem;
 }
 
 .font-1{

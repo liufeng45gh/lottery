@@ -5,6 +5,14 @@
     background: #a6f6ff;
 }
 
+.bottom-bg-1{
+   height: 30%;
+   width: 100%;
+   position: absolute;
+   bottom: 0px;
+   background: #85f3ff;
+}
+
 .img-bg-1{
     height: 100%;
     width: 100%;
@@ -31,14 +39,14 @@
 
     position: absolute;
     left: 4%;
-    top: 37rem;
+    bottom: 5rem;
 }
 
 .process-front{
     width: 30%;
     position: absolute;
     left: 4%;
-    top: 37rem;
+    bottom: 5rem;
     height: 1rem;
 }
 
@@ -47,7 +55,7 @@
        width: 9rem;
        position: absolute;
        left: 8rem;
-       top: 39.3rem;
+       bottom: 7.3rem;
 }
 
 .font-1{

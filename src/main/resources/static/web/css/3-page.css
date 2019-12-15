@@ -16,7 +16,7 @@
     width: 100%;
     position: absolute;
     left: 0px;
-    top: 12.16rem;
+    bottom: 0rem;
 }
 .my{
 
@@ -81,7 +81,7 @@
    width: 11.28rem;
     position: absolute;
     left: 7rem;
-    top: 36.56rem;
+    bottom: 11rem;
     height:2rem;
    font-size: 0.93rem;
    line-height: 1.9rem;
@@ -91,6 +91,6 @@
     width: 36%;
     position: absolute;
     left: 32%;
-    top: 39.16rem;
+    bottom: 7.16rem;
 }
 

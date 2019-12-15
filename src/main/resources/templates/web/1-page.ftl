@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/web/css/1-page.css"/>
 
 <div class="page-bg-1">
+    <div class="bottom-bg-1"></div>
     <img class="img-bg-1" src="/web/img/page1/bg.png"/>
     <img class="title-1" src="/web/img/page1/title.png"/>
 

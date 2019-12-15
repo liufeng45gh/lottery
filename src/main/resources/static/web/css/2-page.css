@@ -28,20 +28,31 @@
     width: 91%;
     position: absolute;
     left: 4.5%;
-    top: 10.8rem;
+    top: 11.8rem;
 }
-.wish-input{
+.wish-input-bg{
     width: 98%;
     position: absolute;
     left: 1%;
-    top: 28.5rem;
+   bottom: 0.0rem;
+}
+
+.wish-input{
+  width: 75%;
+  position: absolute;
+  left: 12.5%;
+   bottom: 9.0rem;
+  height: 2.3rem;
+  background: transparent;
+  border: none;
+  text-indent: 1rem;
 }
 
 .p2-submit{
     width: 32%;
     position: absolute;
     left: 34%;
-    top: 40.5rem;
+    bottom: 1.5rem;
 }
 
 .font-2{

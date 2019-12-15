@@ -6,7 +6,7 @@
 
 <img class="img-bg-3" src="/web/img/page3/bg.png"/>
 <img class="my" src="/web/img/page3/my.png"/>
-<div class="my-text">我的中奖</div>
+<div class="my-text" id="my-text">我的中奖</div>
 
 <img class="opportunity" src="/web/img/page3/opportunity.png"/>
 <div class="opportunity-text" id="opportunity-text"">您今天还有3次抽奖机会</div>

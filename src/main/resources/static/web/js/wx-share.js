@@ -7,8 +7,8 @@ if(lineLink.indexOf("?") != -1)
     console.log(lineLink);
 }
 
-var shareContent = "了解形势目标，担当任务责任";
-var shareTitle = "天然气销售“形势目标任务责任”主题教育知识竞赛";
+var shareContent = "官微三周年 幸运大转盘";
+var shareTitle = "每天三次机会,赢100元加油卡,超高中奖概率";
 var shareImgUrl = "http://question.stack.xin/web/img/share-icon.png";
 var appid = "wx1b792045969d2147";
   

@@ -67,6 +67,7 @@ function doLoadFinish(){
 
 function toInitPage(){
     swiper.slideTo(1);
+    loadWishList();
 }
 
 $(document).ready(function(){

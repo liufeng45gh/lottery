@@ -13,6 +13,7 @@ public class MemberAward {
 
     private Integer awardId;
 
+
     private Date created_at;
 
     private Integer count;

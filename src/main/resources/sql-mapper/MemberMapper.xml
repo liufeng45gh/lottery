@@ -6,9 +6,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.lucifer.mapper.MemberMapper">
 	<resultMap type="com.lucifer.model.Member" id="MemberMap">
 		<id column="id" property="id"/>
-		<result column="telephone" property="telephone"/>
-		<result column="department" property="department"/>
-		<result column="company" property="company"/>
+		<result column="wx_id" property="wxId"/>
+		<result column="phone" property="phone"/>
+		<result column="real_name" property="real_name"/>
+		<result column="avatar" property="avatar"/>
 		<result column="nickname" property="nickName"/>
 		<result column="created_at" property="createdAt"/>
 		<result column="updated_at" property="updatedAt"/>

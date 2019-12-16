@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lucier.model">
+    <resultMap type="com.lucifer.model.MemberAward" id="AwardCountMap">
+        <result column="award_id" property="awardId"/>
+        <result column="count" property="count"/>
+    </resultMap>
+    <select id="getMemberAwardCount"  resultMap="AwardCountMap">
+        select award_id , count(award_id) count
+        from member_award
+        where member_id = #{memberId}
+        group by award_id
+    </select>
+
+
+</mapper>

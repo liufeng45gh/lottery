@@ -21,11 +21,18 @@ public class WishController {
     WishDao wishDao;
 
     @PostMapping(value = "/wish/commit")
-    public Result put(@RequestBody  Wish wish, @CookieValue(value = "token",required = false) String token) throws NotLoginException {
+    public Result put(@RequestParam String text, @CookieValue(value = "token",required = false) String token) throws NotLoginException {
+        if (StringHelper.isEmpty(text)) {
+            return Result.fail("text can not be null");
+        }
         String userId = wxService.getIdByToken(token);
         if (StringHelper.isEmpty(userId)) {
             throw new NotLoginException("can not find user by token  : " + token);
         }
+        Wish wish = new Wish();
+        wish.setText(text);
+        Long memberId = Long.valueOf(userId);
+        wish.setMemberId(memberId);
         wishDao.insertWish(wish);
         return Result.ok();
     }

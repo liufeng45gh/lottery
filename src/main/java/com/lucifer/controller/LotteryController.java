@@ -32,4 +32,6 @@ public class LotteryController {
 
         return "/web/my";
     }
+
+
 }

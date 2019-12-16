@@ -76,10 +76,7 @@ $(document).ready(function(){
         //toPage(1);
     });
 
-    $("#p2-submit").click(function(){
-            swiper.slideTo(2);
-            //toPage(2);
-    });
+
     $("#opportunity-text").click(function () {
         openWin(1);
     });

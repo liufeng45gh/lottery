@@ -8,6 +8,7 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="/swiper/dist/css/swiper.min.css"/>
     <link rel="stylesheet" href="/web/css/mobile.css?v=1.0"/>
+    <link rel="stylesheet" href="/web/css/slideup.css?v=1.0"/>
     <script  src="/web/js/jquery-3.1.1.js"></script>
     <script  type="text/javascript" src="/layer/layer.js"></script>
     <!-- Swiper JS -->
@@ -46,7 +47,7 @@
 
 
 <!-- Initialize Swiper -->
-
+<script src="/web/js/myslideup.js?v=1.1"></script>
 <script src="/web/js/index.js?v=1.1"></script>
 <script src="/web/js/wish.js?v=1.1"></script>
 

@@ -36,3 +36,23 @@ $(document).ready(function(){
         //toPage(2);
     });
 });
+
+function loadWishList(){
+
+    $.ajax({
+        type: "GET",
+        url: "/wish/list",
+        dataType: "json",
+        success: function (data) {
+            $("#wish-list").empty();
+            for (i = 0; i < data.length; i++) {
+                var wish = data[i];
+                $("#wish-list").append('<li >'+wish.nickName + ': ' + wish.text + '</li>');
+             }
+             $("#wish-list").slideUp();
+        },
+        error: function (message) {
+            layer.msg("系统错误",{icon: 5});
+        }
+    });
+}

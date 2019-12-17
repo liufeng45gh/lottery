@@ -24,19 +24,19 @@
     <img class="img-bg-1" src="/web/img/my/b5.png"/>
 
     <div class="text-1" >
-        王者粉丝奖 100元加油卡: 0
+        王者粉丝奖 100元加油卡: ${award_1!0}
     </div>
     <div class="text-2" >
-        钻石粉丝奖 30元红包: 0
+        钻石粉丝奖 30元红包: ${award_2!0}
     </div>
     <div class="text-3" >
-        白金粉丝奖 20元红包: 0
+        白金粉丝奖 20元红包: ${award_3!0}
     </div>
     <div class="text-4" >
-        黄金粉丝奖 10元红包: 0
+        黄金粉丝奖 10元红包: ${award_4!0}
     </div>
     <div class="text-5" >
-        青铜粉丝奖 5元红包: 0
+        青铜粉丝奖 5元红包: ${award_5!0}
     </div>
 
 
@@ -48,7 +48,7 @@
     </div>
 
     <img class="phone-bg" src="/web/img/my/phone-bg.png"/>
-    <input class="phone-input" id="phone-input" />
+    <input class="phone-input" id="phone-input" value="${member.phone!}"/>
 
 
     <div class="title-2" >
@@ -56,7 +56,7 @@
     </div>
 
     <img class="name-bg" src="/web/img/my/phone-bg.png"/>
-    <input  class="name-input" id="name-input"/>
+    <input  class="name-input" id="name-input" value="${member.realName!}"/>
 
 
     <img class="b5-3" src="/web/img/my/b5-3.png"/>

@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping(value = "/mobile")
 public class MemberController {
 
     @Resource
@@ -34,7 +33,7 @@ public class MemberController {
         return Result.ok(member);
     }
 
-    @RequestMapping(value = "/user-info",method = RequestMethod.POST)
+    @RequestMapping(value = "/member-info",method = RequestMethod.POST)
     @ResponseBody
     public Result updateMemberInfo(@CookieValue(Constant.TOKEN) String token,Member member) throws UnexpectedException {
         memberLoginService.updateMemberInfo(token,member);

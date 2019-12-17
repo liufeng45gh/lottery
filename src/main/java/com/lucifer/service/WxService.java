@@ -134,7 +134,7 @@ public class WxService {
         String token = UUID.randomUUID().toString();
         //stringRedisTemplate.opsForValue().set(Constant.CACHE_KEY_PERSISTENCE_TOKEN_PRE+token,wxInfo.getWxId());
         this.setToken(token,member.getId());
-        Cookie c2 = new Cookie("token",token);
+        Cookie c2 = new Cookie(Constant.TOKEN,token);
 //设置生命周期为1小时，秒为单位
         c2.setPath("/");
         c2.setMaxAge(12 * 30 * 24 * 3600);

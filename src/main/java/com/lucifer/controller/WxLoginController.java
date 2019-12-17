@@ -3,6 +3,7 @@ package com.lucifer.controller;
 import com.lucifer.exception.NotLoginException;
 import com.lucifer.exception.WxAuthenticationException;
 import com.lucifer.service.WxService;
+import com.lucifer.utils.Constant;
 import com.lucifer.utils.Result;
 import com.lucifer.utils.StringHelper;
 import org.json.JSONException;
@@ -59,7 +60,7 @@ public class WxLoginController {
 
     @RequestMapping(value="check-login",method = RequestMethod.GET)
     @ResponseBody
-    public Result checkLogin(@CookieValue(value = "token",required = false) String token) throws NotLoginException {
+    public Result checkLogin(@CookieValue(value = Constant.TOKEN,required = false) String token) throws NotLoginException {
         return wxService.checkLoin(token);
     }
 }

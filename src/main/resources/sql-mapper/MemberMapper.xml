@@ -46,9 +46,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="updateMemberInfo">
 		update member
 		set
-		nickname = #{nickName},
-		department = #{department},
-		company = #{company}
+		real_name = #{realName},
+		phone = #{phone}
 		where id = #{id}
 	</update>
 

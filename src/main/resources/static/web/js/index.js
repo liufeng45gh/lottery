@@ -127,4 +127,9 @@ function openMy(){
     });
 }
 
+function closeWinAndOpenMy(){
+    layer.closeAll();
+    openMy();
+}
+
 

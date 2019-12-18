@@ -10,8 +10,9 @@
     <img class="process-bg" src="/web/img/page1/process-bg.png"/>
 
     <img class="process-front" src="/web/img/page1/process-front.png"/>
-
+    <!--
     <img class="loading" id="start-btn" src="/web/img/page1/loading.png"/>
+    -->
 
 
 

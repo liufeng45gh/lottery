@@ -45,7 +45,10 @@ function showReward(index){
 
      $('#rotate-dish').rotate(angle);
      if (index != 0) {
-        openWin(index);
+      setTimeout(function() {
+             openWin(index);
+         },1000);
+
      }
 
      rotateIntervalId = null;

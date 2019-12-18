@@ -24,6 +24,8 @@ public class Constant {
 
 	public static final String CACHE_KEY_PERSISTENCE_TOKEN_PRE = "LOTTERY:PERSISTENCE:TOKEN:";
 
+	public static final String CACHE_KEY_DAY_LOTTERY_COUNT_PRE = "LOTTERY:LOTTERY_DAY_COUNT:";
+
 
 
 

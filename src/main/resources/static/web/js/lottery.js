@@ -14,7 +14,7 @@ function startRotate(){
     var ranInteger = getRndInteger(0,5);
     setTimeout(function() {
         showReward(ranInteger);
-    });
+    },10000);
 }
 
 function stopRotate(){

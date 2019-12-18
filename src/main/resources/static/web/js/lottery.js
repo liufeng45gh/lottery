@@ -25,31 +25,33 @@ function stopRotate(){
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-
+var rewardLevel;
 function showReward(index){
+     rewardLevel = index;
      clearInterval(rotateIntervalId);
-     setTimeout(function() {
-         var times = angle/360;
-         if (index == 0){
-            angle = times* 360 + 360;
-         } else if (index == 1){
-            angle = times* 360 + 360 + 323;
-         } else if (index == 2){
-            angle = times* 360 + 360 + 251;
-         }else if (index == 3){
-            angle = times* 360 + 360 + 180;
-         }else if (index == 4){
-            angle = times* 360 + 360 + 107;
-         }else if (index == 5){
-            angle = times* 360 + 360 + 34;
-         }
-         $('#rotate-dish').rotate(angle);
-     },130);
+
+     var times = angle/360;
+     times = parseInt(times);
+     if (index == 0){
+        angle = times* 360 + 360;
+     } else if (index == 2){
+        angle = times* 360 + 360 + 323;
+     } else if (index == 3){
+        angle = times* 360 + 360 + 251;
+     }else if (index == 4){
+        angle = times* 360 + 360 + 180;
+     }else if (index == 5){
+        angle = times* 360 + 360 + 107;
+     }else if (index == 1){
+        angle = times* 360 + 360 + 34;
+     }
+     $('#rotate-dish').rotate(angle);
+
 
      if (index != 0) {
       setTimeout(function() {
              openWin(index);
-         },1000);
+         },2000);
 
      }
 

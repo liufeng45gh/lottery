@@ -14,7 +14,7 @@
 
 <img class="rotate-bg" src="/web/img/page3/rotate-bg.png"/>
 
-<img class="rotate-dish" src="/web/img/page3/rotate-dish.png"/>
+<img class="rotate-dish" id="rotate-dish" src="/web/img/page3/rotate-dish.png"/>
 
 <img class="rotate-center" src="/web/img/page3/rotate-center.png"/>
 

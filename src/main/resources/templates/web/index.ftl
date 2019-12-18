@@ -17,6 +17,7 @@
 
     <script  type="text/javascript" src="/web/js/wx-share.js?version=1.0"></script>
     <script src="/web/js/common.js"></script>
+    <script src="/web/js/jquery.rotate.min.js"></script>
     <style>
 
         body .layer-test{background: none; box-shadow: none;}
@@ -50,6 +51,7 @@
 <script src="/web/js/myslideup.js?v=1.1"></script>
 <script src="/web/js/index.js?v=1.1"></script>
 <script src="/web/js/wish.js?v=1.1"></script>
+<script src="/web/js/lottery.js?v=1.1"></script>
 
 </body>
 </html>

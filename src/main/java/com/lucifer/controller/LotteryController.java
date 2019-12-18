@@ -2,6 +2,7 @@ package com.lucifer.controller;
 
 import com.lucifer.dao.AwardDao;
 import com.lucifer.enumeration.Award;
+import com.lucifer.exception.AwardException;
 import com.lucifer.exception.NotLoginException;
 import com.lucifer.mapper.MemberMapper;
 import com.lucifer.model.Member;
@@ -86,7 +87,7 @@ public class LotteryController {
         return Result.ok(residue);
     }
 
-    public Result doLottery(@CookieValue(value = "token",required = false) String token) throws NotLoginException {
+    public Result doLottery(@CookieValue(value = "token",required = false) String token) throws NotLoginException, AwardException {
         return lotteryService.doLottery(token);
     }
 

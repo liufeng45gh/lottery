@@ -3,6 +3,9 @@ package com.lucifer.service;
 import com.lucifer.dao.AwardDao;
 import com.lucifer.exception.AwardException;
 import com.lucifer.exception.NotLoginException;
+import com.lucifer.mapper.AwardMapper;
+import com.lucifer.model.AwardDayConfig;
+import com.lucifer.model.MemberAward;
 import com.lucifer.utils.Constant;
 import com.lucifer.utils.DateUtils;
 import com.lucifer.utils.Result;
@@ -16,6 +19,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 @Service
 public class LotteryService {
@@ -26,8 +30,11 @@ public class LotteryService {
     @Resource
     WxService wxService;
 
+//    @Resource
+//    AwardDao awardDao;
+
     @Resource
-    AwardDao awardDao;
+    AwardMapper awardMapper;
 
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -67,7 +74,7 @@ public class LotteryService {
         Long memberId = Long.valueOf(userId);
 
         String dayString = dateFormat.format(DateUtils.now());
-        String awardDay = awardDao.getAwardDay(dayString);
+        String awardDay = awardMapper.getAwardDay(dayString);
         if (StringHelper.isEmpty(awardDay)) {
             throw  new AwardException("Not Award Day");
         }
@@ -77,9 +84,43 @@ public class LotteryService {
             throw  new AwardException("award times limit exceed");
         }
 
+        List<AwardDayConfig> awardDayConfigList = awardMapper.getAwardDayConfigList(dayString);
 
-        
+        //计算1
+        //AwardDayConfig config1 = this.getAwardDayConfig(awardDayConfigList,1);
+
 
         return Result.ok();
+    }
+
+    public MemberAward doLotteryByConfigId( List<AwardDayConfig> awardDayConfigList,Integer configId,Long memberId,String day){
+        Float rate = 0f;
+        AwardDayConfig config = this.getAwardDayConfig(awardDayConfigList,configId);
+        logger.info("config is {}-{}-{}",day,configId,config);
+        if (null != config) {
+            Integer count = awardMapper.getAwardDayCount(day,configId);
+            logger.info("count is {} - {} - {} ",day, configId, count);
+            if (null != count) {
+                if(count >=  config.getCount()){
+                    logger.info("today this award is exceed");
+                    return null;
+                }
+            }
+        }
+        return doLottery(memberId,rate);
+    }
+
+    public MemberAward doLottery(Long memberId,Float rate){
+        return null;
+    }
+
+
+    public AwardDayConfig getAwardDayConfig(List<AwardDayConfig> awardDayConfigList,Integer configId){
+        for(AwardDayConfig config: awardDayConfigList) {
+            if (configId.equals(config.getConfigId())) {
+                return config;
+            }
+        }
+        return null;
     }
 }

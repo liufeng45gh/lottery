@@ -8,6 +8,14 @@
         <result column="award_id" property="awardId"/>
         <result column="count" property="count"/>
     </resultMap>
+
+    <resultMap type="com.lucifer.model.AwardDayConfig" id="AwardDayConfigMap">
+        <result column="id" property="id"/>
+        <result column="day" property="day"/>
+        <result column="config_id" property="configId"/>
+        <result column="rate" property="rate"/>
+        <result column="count" property="count"/>
+    </resultMap>
     <select id="getMemberAwardCount"  resultMap="AwardCountMap">
         select award_id , count(award_id) count
         from member_award
@@ -17,6 +25,14 @@
 
     <select id="getAwardDay" resultType="java.lang.String">
         select id form award_day where id = #{id}
+    </select>
+
+    <select id="getAwardDayConfigList" resultMap="AwardDayConfigMap">
+        select * from award_day_config where day = #{day}
+    </select>
+    
+    <select id="getAwardDayCount" resultType="java.lang.Integer">
+        select a.count form award_day_count a where a.day = #{day} and config_id = #{configId}
     </select>
 
 

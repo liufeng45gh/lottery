@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -69,6 +70,7 @@ public class LotteryController {
     }
 
     @GetMapping("/my-residue-count")
+    @ResponseBody
     public Result myResidueCount(@CookieValue(value = "token",required = false) String token) throws NotLoginException {
         String userId = wxService.getIdByToken(token);
         if (StringHelper.isEmpty(userId)) {
@@ -82,6 +84,10 @@ public class LotteryController {
             residue = 0;
         }
         return Result.ok(residue);
+    }
+
+    public Result doLottery(@CookieValue(value = "token",required = false) String token) throws NotLoginException {
+        return lotteryService.doLottery(token);
     }
 
 

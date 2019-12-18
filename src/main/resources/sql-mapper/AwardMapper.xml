@@ -15,5 +15,9 @@
         group by award_id
     </select>
 
+    <select id="getAwardDay" resultType="java.lang.String">
+        select id form award_day where id = #{id}
+    </select>
+
 
 </mapper>

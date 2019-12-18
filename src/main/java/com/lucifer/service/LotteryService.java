@@ -78,7 +78,6 @@ public class LotteryService {
         }
 
 
-
         
 
         return Result.ok();

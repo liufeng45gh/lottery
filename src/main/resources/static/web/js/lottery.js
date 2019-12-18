@@ -44,7 +44,7 @@ function showReward(index){
             angle = times* 360 + 360 + 34;
          }
          $('#rotate-dish').rotate(angle);
-     },70);
+     },130);
 
      if (index != 0) {
       setTimeout(function() {

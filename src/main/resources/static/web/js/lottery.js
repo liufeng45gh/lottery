@@ -11,3 +11,9 @@ function startRotate(){
 function stopRotate(){
      clearInterval(rotateIntervalId);
 }
+
+$(document).ready(function(){
+    $("#lottery-start").click(function (){
+        startRotate();
+    });
+});

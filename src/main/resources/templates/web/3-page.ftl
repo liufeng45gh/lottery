@@ -20,6 +20,6 @@
 
 <div class="opportunity-text2">剩余机会 3</div>
 
-<img class="lottery-start" src="/web/img/page3/lottery-start.png"/>
+<img class="lottery-start" id="lottery-start" src="/web/img/page3/lottery-start.png"/>
 
 </div>

@@ -43,6 +43,10 @@
     <select id="getAwardTotalCount" resultType="java.lang.Integer">
         select a.count form award_total_count a where config_id = #{configId}
     </select>
+    <select id="countAwardTotalCount" resultType="java.lang.Integer">
+        select count(*) from  member_award
+        where award_id = #{configId}
+    </select>
 
     <insert id="insertMemberAward">
         insert into member_award (member_id,award_id,created_at) values (#{memberId},#{awardId},now())
@@ -51,6 +55,17 @@
     <update id="updateDayAwardCount">
         update award_day_count a set a.count = #{count} where a.day = #{day} and a.config_id = #{configId}
     </update>
+    <insert id="insertDayAwardCount">
+        insert into award_day_count (day,config_id,count) value (#{day},#{configId},#{count});
+    </insert>
+
+    <update id="updateTotalAwardCount">
+        update award_total_count a set a.count = #{count} where  a.config_id = #{configId}
+    </update>
+    
+    <insert id="insertTotalAwardCount">
+        insert into award_total_count (config_id,count) values (#{configId},#{count})
+    </insert>
 
 
 </mapper>

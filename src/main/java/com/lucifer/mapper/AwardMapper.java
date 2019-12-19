@@ -21,10 +21,17 @@ public interface AwardMapper {
 
     Integer getAwardTotalCount(@Param(value = "configId") Integer configId);
 
+    Integer countAwardTotalCount(@Param(value = "configId") Integer configId);
+
     Integer insertMemberAward(MemberAward memberAward);
 
     Integer updateDayAwardCount(@Param(value = "day") String day,@Param(value = "configId") Integer configId,@Param(value = "count")Integer count);
 
     Integer insertDayAwardCount(@Param(value = "day") String day,@Param(value = "configId") Integer configId,@Param(value = "count")Integer count);
+
+    Integer updateTotalAwardCount(@Param(value = "configId") Integer configId,@Param(value = "count")Integer count);
+
+    Integer insertTotalAwardCount(@Param(value = "configId") Integer configId,@Param(value = "count")Integer count);
+
 
 }

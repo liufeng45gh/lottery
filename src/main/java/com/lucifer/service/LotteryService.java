@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.text.DateFormat;
@@ -86,11 +87,19 @@ public class LotteryService {
 
         //计算1
         //AwardDayConfig config1 = this.getAwardDayConfig(awardDayConfigList,1);
+        MemberAward memberAward = null;
+        for (int i = 1; i<6 ;i++){
+            memberAward = this.doLotteryByConfigId(awardDayConfigList,i,memberId,dayString);
+            if(null != memberAward){
+                break;
+            }
+        }
 
 
-        return Result.ok();
+        return Result.ok(memberAward);
     }
 
+    @Transactional
     public MemberAward doLotteryByConfigId( List<AwardDayConfig> awardDayConfigList,Integer configId,Long memberId,String day){
         Double rate = 0d;
         Integer totalCount = awardMapper.getAwardTotalCount(configId);
@@ -143,9 +152,14 @@ public class LotteryService {
         Integer totalDayCount = awardMapper.countAwardDayCount(day,configId);
         Integer updateCount = awardMapper.updateDayAwardCount(day,configId,totalDayCount);
         if (updateCount == 0) {
-            awardMapper.in
+            awardMapper.insertDayAwardCount(day,configId,1);
         }
+        Integer totalCount = awardMapper.countAwardDayCount(day,configId);
 
+        updateCount = awardMapper.updateTotalAwardCount(configId,totalCount);
+        if (updateCount == 0){
+            awardMapper.insertTotalAwardCount(configId,1);
+        }
 
         return memberAward;
     }

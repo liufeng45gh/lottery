@@ -23,7 +23,7 @@
     </select>
 
     <select id="getAwardDay" resultType="java.lang.String">
-        select id form award_day where id = #{id}
+        select id from award_day where id = #{id}
     </select>
 
     <select id="getAwardDayConfigList" resultMap="AwardDayConfigMap">

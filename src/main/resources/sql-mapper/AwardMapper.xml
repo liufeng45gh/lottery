@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.lucier.model">
+<mapper namespace="com.lucifer.mapper.AwardMapper">
     <resultMap type="com.lucifer.model.MemberAward" id="AwardCountMap">
         <result column="award_id" property="awardId"/>
         <result column="count" property="count"/>

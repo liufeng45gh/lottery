@@ -31,8 +31,8 @@ function startRotate(){
             }
 
         },
-        error: function (message) {
-            layer.msg("系统错误",{icon: 5});
+        error: function (xhr, ajaxOptions, thrownError) {
+            layer.msg(thrownError.message,{icon: 5});
         }
     });
 

@@ -26,13 +26,13 @@ function startRotate(){
                     showReward(ranInteger);
                 },10000);
             }else {
-                layer.msg("系统错误",{icon: 5});
+                layer.msg("系统错误");
                 rotateIntervalId = null;
             }
 
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            layer.msg(thrownError.message,{icon: 5});
+            layer.msg(thrownError.message);
             rotateIntervalId = null;
         }
     });

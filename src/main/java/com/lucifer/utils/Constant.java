@@ -26,6 +26,12 @@ public class Constant {
 
 	public static final String CACHE_KEY_DAY_LOTTERY_COUNT_PRE = "LOTTERY:LOTTERY_DAY_COUNT:";
 
+	public static final String Not_Award_Day = "今天不能抽奖";
+
+	public static final String Award_Times_Limit_Exceed = "抽奖次数用尽";
+
+
+
 
 
 

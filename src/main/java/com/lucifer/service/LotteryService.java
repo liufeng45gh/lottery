@@ -75,12 +75,12 @@ public class LotteryService {
         String dayString = dateFormat.format(DateUtils.now());
         String awardDay = awardMapper.getAwardDay(dayString);
         if (StringHelper.isEmpty(awardDay)) {
-            throw  new AwardException("Not Award Day");
+            throw  new AwardException(Constant.Not_Award_Day);
         }
 
         Long count = this.incrementMemberLotteryCount(memberId);
         if (count>3) {
-            throw  new AwardException("award times limit exceed");
+            throw  new AwardException(Constant.Award_Times_Limit_Exceed);
         }
 
         List<AwardDayConfig> awardDayConfigList = awardMapper.getAwardDayConfigList(dayString);

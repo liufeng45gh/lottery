@@ -31,12 +31,12 @@ function startRotate(){
             }
 
         },
-        error: function (xhr, ajaxOptions, thrownError) {
-            console.log('ajaxOptions');
-            console.log(ajaxOptions);
-            console.log('thrownError');
-            console.log(thrownError);
-            layer.msg(thrownError.message);
+        error: function (data) {
+//            console.log('ajaxOptions');
+//            console.log(ajaxOptions);
+//            console.log('thrownError');
+//            console.log(thrownError);
+            layer.msg(data.message);
             rotateIntervalId = null;
         }
     });

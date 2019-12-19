@@ -12,10 +12,7 @@ import com.lucifer.service.WxService;
 import com.lucifer.utils.Result;
 import com.lucifer.utils.StringHelper;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -87,6 +84,8 @@ public class LotteryController {
         return Result.ok(residue);
     }
 
+    @PostMapping(value = "/do-lottery")
+    @ResponseBody
     public Result doLottery(@CookieValue(value = "token",required = false) String token) throws NotLoginException, AwardException {
         return lotteryService.doLottery(token);
     }

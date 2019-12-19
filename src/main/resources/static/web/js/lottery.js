@@ -11,10 +11,32 @@ function startRotate(){
         $('#rotate-dish').rotate(angle);
     }, 60);
 
-    var ranInteger = getRndInteger(0,5);
-    setTimeout(function() {
-        showReward(ranInteger);
-    },10000);
+
+    $.ajax({
+        type: "POST",
+        url: "/do-lottery",
+        dataType: "json",
+        success: function (data) {
+            if (data.ok) {
+                var ranInteger = 0;
+                if (null != data.data) {
+                    ranInteger = data.data.awardId;
+                }
+
+                setTimeout(function() {
+                    showReward(ranInteger);
+                },10000);
+            }else {
+                layer.msg("系统错误",{icon: 5});
+            }
+
+        },
+        error: function (message) {
+            layer.msg("系统错误",{icon: 5});
+        }
+    });
+
+
 }
 
 function stopRotate(){

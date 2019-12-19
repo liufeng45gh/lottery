@@ -32,6 +32,10 @@ function startRotate(){
 
         },
         error: function (xhr, ajaxOptions, thrownError) {
+            console.log('ajaxOptions');
+            console.log(ajaxOptions);
+            console.log('thrownError');
+            console.log(thrownError);
             layer.msg(thrownError.message);
             rotateIntervalId = null;
         }

@@ -6,18 +6,17 @@ function startRotate(){
         return
     }
     angle = 0;
-    rotateIntervalId = setInterval(function(){
-        angle += 15;
-        $('#rotate-dish').rotate(angle);
-    }, 60);
-
-
+    rotateIntervalId = 1;
     $.ajax({
         type: "POST",
         url: "/do-lottery",
         dataType: "json",
         success: function (data) {
             if (data.ok) {
+                 rotateIntervalId = setInterval(function(){
+                        angle += 15;
+                        $('#rotate-dish').rotate(angle);
+                    }, 60);
                 var ranInteger = 0;
                 if (null != data.data) {
                     ranInteger = data.data.awardId;
@@ -28,11 +27,13 @@ function startRotate(){
                 },10000);
             }else {
                 layer.msg("系统错误",{icon: 5});
+                rotateIntervalId = null;
             }
 
         },
         error: function (xhr, ajaxOptions, thrownError) {
             layer.msg(thrownError.message,{icon: 5});
+            rotateIntervalId = null;
         }
     });
 

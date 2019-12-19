@@ -9,7 +9,7 @@ import java.util.List;
 
 @MapperScanSelf
 public interface AwardMapper {
-    List<MemberAward> getMemberAwardCount(@Param(value = "memberId") Long memberId);
+    List<MemberAward> getMemberAwardCount(@Param(value = "id") Long id);
 
     String getAwardDay(@Param(value = "id") String id);
 

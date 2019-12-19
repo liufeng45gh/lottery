@@ -10,7 +10,7 @@
 <div class="my-text" id="my-text">我的中奖</div>
 
 <img class="opportunity" src="/web/img/page3/opportunity.png"/>
-<div class="opportunity-text" id="opportunity-text"">您今天还有3次抽奖机会</div>
+<div class="opportunity-text" id="opportunity-text"></div>
 
 <img class="rotate-bg" src="/web/img/page3/rotate-bg.png"/>
 
@@ -18,7 +18,7 @@
 
 <img class="rotate-center" src="/web/img/page3/rotate-center.png"/>
 
-<div class="opportunity-text2">剩余机会 3</div>
+<div class="opportunity-text2" id="opportunity-text2"></div>
 
 <img class="lottery-start" id="lottery-start" src="/web/img/page3/lottery-start.png"/>
 

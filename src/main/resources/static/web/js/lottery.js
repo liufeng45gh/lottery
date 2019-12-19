@@ -63,3 +63,23 @@ $(document).ready(function(){
         startRotate();
     });
 });
+
+function refreshResidue(){
+     $.ajax({
+            type: "GET",
+            url: "/my-residue-count",
+            dataType: "json",
+            success: function (data) {
+                if (data.ok) {
+                    $("#opportunity-text").text("您今天还有"+data.data+"次抽奖机会");
+                    $("#opportunity-text2").text("剩余机会 "+data.data);
+                }else {
+                    layer.msg("系统错误",{icon: 5});
+                }
+
+            },
+            error: function (message) {
+                layer.msg("系统错误",{icon: 5});
+            }
+        });
+}

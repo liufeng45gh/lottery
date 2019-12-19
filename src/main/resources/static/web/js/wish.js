@@ -22,6 +22,7 @@ $(document).ready(function(){
                     layer.msg("提交成功",{icon: 6});
                     setTimeout(function(){
                         swiper.slideTo(2);
+                         refreshResidue();
                     },2000)
                 }else {
                     layer.msg("系统错误",{icon: 5});

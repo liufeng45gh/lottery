@@ -52,6 +52,7 @@ var rewardLevel;
 function showReward(index){
      rewardLevel = index;
      clearInterval(rotateIntervalId);
+     refreshResidue();
 
      var times = angle/360;
      times = parseInt(times);
@@ -79,6 +80,8 @@ function showReward(index){
      }
 
      rotateIntervalId = null;
+
+
 }
 
 $(document).ready(function(){

@@ -11,7 +11,7 @@ public class AwardDayConfig {
 
     private Integer configId;
 
-    private Float rate;
+    private Double rate;
 
     private  Integer count;
 }

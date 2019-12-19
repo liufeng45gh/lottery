@@ -10,7 +10,6 @@
     </resultMap>
 
     <resultMap type="com.lucifer.model.AwardDayConfig" id="AwardDayConfigMap">
-        <result column="id" property="id"/>
         <result column="day" property="day"/>
         <result column="config_id" property="configId"/>
         <result column="rate" property="rate"/>
@@ -34,6 +33,24 @@
     <select id="getAwardDayCount" resultType="java.lang.Integer">
         select a.count form award_day_count a where a.day = #{day} and config_id = #{configId}
     </select>
+
+    <select id="countAwardDayCount" resultType="java.lang.Integer">
+         select count(*) from  member_award
+        where award_id = #{configId}
+        and to_days (created_at) = to_days(#{day})
+    </select>
+
+    <select id="getAwardTotalCount" resultType="java.lang.Integer">
+        select a.count form award_total_count a where config_id = #{configId}
+    </select>
+
+    <insert id="insertMemberAward">
+        insert into member_award (member_id,award_id,created_at) values (#{memberId},#{awardId},now())
+    </insert>
+
+    <update id="updateDayAwardCount">
+        update award_day_count a set a.count = #{count} where a.day = #{day} and a.config_id = #{configId}
+    </update>
 
 
 </mapper>

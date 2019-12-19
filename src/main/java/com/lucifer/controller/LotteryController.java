@@ -1,9 +1,9 @@
 package com.lucifer.controller;
 
-import com.lucifer.dao.AwardDao;
 import com.lucifer.enumeration.Award;
 import com.lucifer.exception.AwardException;
 import com.lucifer.exception.NotLoginException;
+import com.lucifer.mapper.AwardMapper;
 import com.lucifer.mapper.MemberMapper;
 import com.lucifer.model.Member;
 import com.lucifer.model.MemberAward;
@@ -25,7 +25,7 @@ import java.util.List;
 public class LotteryController {
 
     @Resource
-    AwardDao awardDao;
+    AwardMapper awardMapper;
 
     @Resource
     WxService wxService;
@@ -61,7 +61,7 @@ public class LotteryController {
         }
 
         Long memberId = Long.valueOf(userId);
-        List<MemberAward> memberAwards = awardDao.getMemberAwardCount(memberId);
+        List<MemberAward> memberAwards = awardMapper.getMemberAwardCount(memberId);
         for (MemberAward memberAward : memberAwards) {
             request.setAttribute("award_" + memberAward.getAwardId(),memberAward.getCount());
         }

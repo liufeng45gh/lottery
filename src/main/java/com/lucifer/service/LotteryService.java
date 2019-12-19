@@ -1,6 +1,6 @@
 package com.lucifer.service;
 
-import com.lucifer.dao.AwardDao;
+import com.lucifer.enumeration.Award;
 import com.lucifer.exception.AwardException;
 import com.lucifer.exception.NotLoginException;
 import com.lucifer.mapper.AwardMapper;
@@ -30,8 +30,6 @@ public class LotteryService {
     @Resource
     WxService wxService;
 
-//    @Resource
-//    AwardDao awardDao;
 
     @Resource
     AwardMapper awardMapper;
@@ -94,24 +92,62 @@ public class LotteryService {
     }
 
     public MemberAward doLotteryByConfigId( List<AwardDayConfig> awardDayConfigList,Integer configId,Long memberId,String day){
-        Float rate = 0f;
+        Double rate = 0d;
+        Integer totalCount = awardMapper.getAwardTotalCount(configId);
+        if (null == totalCount) {
+            logger.info("{} db total count is null",configId);
+            totalCount = 0;
+        }
+        logger.info("{} total count is  - {}",configId,totalCount);
+        Award award = Award.getById(configId);
+        logger.info("{} Award config count is  - {}",award.id,award.totalCount);
+        if (totalCount>=award.totalCount) {
+            logger.info("{} config total award count is exceed",configId);
+            return null;
+        }
+        rate = award.rate;
+        logger.info("{} set rate  - {}",configId,rate);
+
+
         AwardDayConfig config = this.getAwardDayConfig(awardDayConfigList,configId);
-        logger.info("config is {}-{}-{}",day,configId,config);
+        logger.info("{}-{} config is -{}",day,configId,config);
         if (null != config) {
             Integer count = awardMapper.getAwardDayCount(day,configId);
-            logger.info("count is {} - {} - {} ",day, configId, count);
+            logger.info("{} - {} count is  - {} ",day, configId, count);
             if (null != count) {
                 if(count >=  config.getCount()){
-                    logger.info("today this award is exceed");
+                    logger.info("{} day award is exceed",configId);
                     return null;
                 }
             }
+            rate = config.getRate();
+            logger.info("{} set rate  - {}",configId,config.getRate());
         }
-        return doLottery(memberId,rate);
+        return doLotteryProcess(configId,memberId,rate,day);
     }
 
-    public MemberAward doLottery(Long memberId,Float rate){
+    public MemberAward doLotteryProcess(Integer configId, Long memberId,Double rate,String day){
+        Double ramdom = Math.random();
+        if (ramdom < rate) {
+            MemberAward memberAward = this.prizesMemberAward(configId,memberId,day);
+            return memberAward;
+        }
         return null;
+    }
+
+    public MemberAward prizesMemberAward(Integer configId, Long memberId,String day){
+        MemberAward memberAward = new MemberAward();
+        memberAward.setAwardId(configId);
+        memberAward.setMemberId(memberId);
+        awardMapper.insertMemberAward(memberAward);
+        Integer totalDayCount = awardMapper.countAwardDayCount(day,configId);
+        Integer updateCount = awardMapper.updateDayAwardCount(day,configId,totalDayCount);
+        if (updateCount == 0) {
+            awardMapper.in
+        }
+
+
+        return memberAward;
     }
 
 

@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 
     $("#opportunity-text").click(function () {
-        openWin(1);
+        //openWin(1);
     });
 
     $("#my-text").click(function () {

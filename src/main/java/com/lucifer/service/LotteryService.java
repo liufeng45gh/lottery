@@ -136,8 +136,9 @@ public class LotteryService {
     }
 
     public MemberAward doLotteryProcess(Integer configId, Long memberId,Double rate,String day){
-        Double ramdom = Math.random();
-        if (ramdom < rate) {
+        Double random = Math.random();
+        logger.info(" random is {}",random);
+        if (random < rate) {
             MemberAward memberAward = this.prizesMemberAward(configId,memberId,day);
             return memberAward;
         }

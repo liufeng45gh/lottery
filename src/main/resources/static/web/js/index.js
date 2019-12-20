@@ -68,6 +68,9 @@ function doLoadFinish(){
 function toInitPage(){
     swiper.slideTo(1);
     loadWishList();
+    var mp3 = "/music/happy.mp3";
+    var audio = new Audio(mp3);
+    audio.play();
 }
 
 $(document).ready(function(){

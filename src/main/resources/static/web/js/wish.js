@@ -3,8 +3,8 @@ $(document).ready(function(){
     $("#p2-submit").click(function(){
 
         var wishText = $("#wish-input").val();
-        if (wishText.trim()=="" || wishText.length < 6) {
-            layer.msg("祝福不能少于5个字");
+        if (wishText.trim()=="" ) {
+            layer.msg("祝福不能为空");
             return;
         }
 

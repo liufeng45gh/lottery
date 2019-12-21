@@ -45,6 +45,8 @@ function createSwiper(){
     $(".swiper-slide").css("display","block");
     swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
+      noSwiping : true,
+      autoHeight:true
     });
 }
 

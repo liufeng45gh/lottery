@@ -5,7 +5,7 @@
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name="renderer" content="webkit">
-  <title>用户登录 - 答题后台管理系统</title>
+  <title>用户登录 - 后台管理系统</title>
 
 
   <link rel='stylesheet' href='/cms/css/theme-default.css' type='text/css' media='screen' />
@@ -20,7 +20,7 @@
   <div id='container'>
     <div id='login-panel'>
       <div class='panel-head'>
-        <h4>答题后台管理系统</h4>
+        <h4>抽奖后台管理系统</h4>
 
 
 

@@ -4,12 +4,11 @@
     </div>
     <div class="panel-body">
         <ul class="tree tree-lines" >
-            <li  id="left_menu_welcome"><a href="/cms/member/list?page=1" >会员列表</a> </li>
-             <li  id="left_menu_add"><a href="/cms/member/lock-list" >会员禁言</a> </li>
+            <li  id="left_menu_welcome"><a href="/cms/reward/list?page=1" >中奖结果列表</a> </li>
         </ul>
     </div>
 
 </div>
 <script>
-$("#top_menu_member").addClass("selected");
+$("#top_menu_reward").addClass("selected");
 </script>

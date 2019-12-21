@@ -15,6 +15,18 @@
         <result column="rate" property="rate"/>
         <result column="count" property="count"/>
     </resultMap>
+
+    <resultMap type="com.lucifer.model.Member" id="MemberMap">
+        <id column="id" property="id"/>
+        <result column="wx_id" property="wxId"/>
+        <result column="phone" property="phone"/>
+        <result column="real_name" property="realName"/>
+        <result column="avatar" property="avatar"/>
+        <result column="nick_name" property="nickName"/>
+        <result column="created_at" property="createdAt"/>
+        <result column="updated_at" property="updatedAt"/>
+    </resultMap>
+
     <select id="getMemberAwardCount"  resultMap="AwardCountMap">
         select award_id , count(award_id) count
         from member_award
@@ -67,5 +79,13 @@
         insert into award_total_count (config_id,count) values (#{configId},#{count})
     </insert>
 
-
+    <select id="rewardList" resultMap="MemberMap">
+        select ma.id,m.wx_id,m.nick_name,m.avatar,m.real_name,ma.created_at
+        from member_award ma
+        left outer join
+        member m
+        on ma.member_id = m.id
+        where ma.award_id = #{awardId}
+        order by ma.id
+    </select>
 </mapper>

@@ -10,7 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result column="phone" property="phone"/>
 		<result column="real_name" property="realName"/>
 		<result column="avatar" property="avatar"/>
-		<result column="nickname" property="nickName"/>
+		<result column="nick_name" property="nickName"/>
 		<result column="created_at" property="createdAt"/>
 		<result column="updated_at" property="updatedAt"/>
 	</resultMap>
@@ -60,5 +60,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		set value = #{value}
 		where sys_config.key = #{key}
 	</update>
+	
+	<select id="memberCmsSearch" resultMap="MemberMap">
+		${_parameter}
+	</select>
+
+	<select id="memberCmsSearchCount" resultType="java.lang.Integer">
+		${_parameter}
+	</select>
 
 </mapper>

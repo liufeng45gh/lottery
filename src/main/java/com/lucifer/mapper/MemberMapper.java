@@ -4,6 +4,8 @@ import com.lucifer.annotation.MapperScanSelf;
 import com.lucifer.model.Member;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 @MapperScanSelf
 public interface MemberMapper {
 
@@ -24,4 +26,8 @@ public interface MemberMapper {
     String getSysConfigValue(@Param("key") String key);
 
     void updateSysConfigValue(@Param("key") String key, @Param("value")String value);
+
+    List<Member> memberCmsSearch(String sql);
+
+    Integer memberCmsSearchCount(String sql);
 }

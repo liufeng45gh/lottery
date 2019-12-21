@@ -22,7 +22,7 @@
 
         </div>
       <h5 id="companyname" style="text-align:left;">
-        商城后台管理系统
+        后台管理系统
         </h5>
     </div>
 
@@ -32,7 +32,7 @@
 
 		    <li  id="top_menu_self"><a href="/cms/self/welcome"><i class="icon-home"></i> <span> 我的地盘</span></a></li>
 		    <li  id="top_menu_user"><a href="/cms/user/list" >管理员</a></li>
-            <li  id="top_menu_question"><a href="/cms/question/list" >题库管理</a></li>
+            <li  id="top_menu_reward"><a href="/cms/reward/list" >中奖情况</a></li>
             <li  id="top_menu_member"><a href="/cms/member/list" >会员</a></li>
 		</ul>
 	</div>

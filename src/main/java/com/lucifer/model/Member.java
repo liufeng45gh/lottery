@@ -23,4 +23,6 @@ public class Member {
 
     private Date updatedAt;
 
+    private String status;
+
 }

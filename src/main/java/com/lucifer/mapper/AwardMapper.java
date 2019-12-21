@@ -2,6 +2,7 @@ package com.lucifer.mapper;
 
 import com.lucifer.annotation.MapperScanSelf;
 import com.lucifer.model.AwardDayConfig;
+import com.lucifer.model.Member;
 import com.lucifer.model.MemberAward;
 import org.apache.ibatis.annotations.Param;
 
@@ -32,6 +33,8 @@ public interface AwardMapper {
     Integer updateTotalAwardCount(@Param(value = "configId") Integer configId,@Param(value = "count")Integer count);
 
     Integer insertTotalAwardCount(@Param(value = "configId") Integer configId,@Param(value = "count")Integer count);
+
+    List<Member> rewardList(@Param(value = "awardId") Integer awardId);
 
 
 }

@@ -15,19 +15,10 @@
 
                 <div id="admin_right">
                 			<div class="content_box" style="border:none">
-                			<div class="position"><span>会员</span><span>&gt;</span><span>会员管理</span><span>&gt;</span><span>会员列表</span></div>
-                			<div class="operating">
-                				<div class="search f_l">
-                					<form  action="" method="get">
-                						电话
-                						<input class="small" name="phone" type="text" value="${(param.phone)!}"/>
-                						昵称
-                						<input class="small" name="nickName" type="text" value="${param.nickName?default("")}"/>
+                			<div class="position"><span>会员</span><span>&gt;</span><span>会员管理</span><span>&gt;</span><span>中奖列表</span></div>
 
-                						<button class="btn" type="submit"><span class="sch">搜 索</span></button>
-                					</form>
-                				</div>
-                			</div>
+                         <#list rewardList as memberList>
+                         <div class="position" style="margin-top:20px;"><span>${memberList_index + 1} 等奖中奖结果</span></div>
                         <div class="content" style="min-height: 200px;">
                             <table class="list_table" style="font-size:13px;">
                                 <thead>
@@ -40,9 +31,9 @@
                                         <th width="200px">姓名</th>
 
 
-                                        <th width="180px">状态</th>
+                                        <th width="180px">中奖时间</th>
 
-                                        <th>操作</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -56,26 +47,17 @@
                                         <td>${(user.realName)!}</td>
 
 
-                                        <td>${user.status?default("")}<#if user.status?default("") = "block">  已禁用 <#else> 正常  </#if>  </td>
+                                        <td>${(user.createdAt)!?datetime} </td>
 
-                                        <td>
 
-                                            <#if user.status?default("") = "block">
-                                                <a href="javascript:void(0)" onclick="activation(${user.id?c})">恢复用户</a>
-                                            <#else>
-                                                <a href="javascript:void(0)" onclick="setUserBlock(${user.id?c})">禁用用户</a>
-                                            </#if>
-
-                                        </td>
                                     </tr>
                                 </#list>
                                 </tbody>
                             </table>
 
                         </div>
+                        </#list>
 
-
-                	${pageDiv}
                 </div>
             </div>
         </div>
@@ -91,8 +73,6 @@
 		//DOM加载完毕执行
 		$(document).ready(function(){
 			$("#left_menu_welcome").addClass("selected");
-			$("#status_select").val("${param.status?default("")}");
-			$("#role_select").val("${param.roleId?default("")}");
 
 		});
 	</script>

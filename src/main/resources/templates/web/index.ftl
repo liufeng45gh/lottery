@@ -15,7 +15,7 @@
     <script src="/swiper/dist/js/swiper.min.js"></script>
     <script  type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
 
-    <script  type="text/javascript" src="/web/js/wx-share.js?version=1.0"></script>
+
     <script src="/web/js/common.js"></script>
     <script src="/web/js/jquery.rotate.min.js"></script>
     <style>
@@ -54,6 +54,6 @@
 <script src="/web/js/index.js?v=1.2"></script>
 <script src="/web/js/wish.js?v=1.2"></script>
 <script src="/web/js/lottery.js?v=1.2"></script>
-
+<script  type="text/javascript" src="/web/js/wx-share.js?version=1.1"></script>
 </body>
 </html>

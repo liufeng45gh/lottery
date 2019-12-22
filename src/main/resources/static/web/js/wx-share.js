@@ -55,6 +55,7 @@ function executeWxConfig(data){
             // 获取"分享到朋友圈"按钮点击状态及自定义分享内容接口
             //alert("wx.ready");
             //$("#bg-music1").get(0).play();
+            $("#bg-music").get(0).play();
             wx.onMenuShareTimeline({
                 title: shareTitle, // 分享标题
                 link: lineLink,

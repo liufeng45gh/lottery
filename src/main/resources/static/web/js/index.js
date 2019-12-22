@@ -137,4 +137,23 @@ function closeWinAndOpenMy(){
     openMy();
 }
 
+var isMusicOn = true;
+$(function(){
+    $(".music-switch").touchClick(function(){
+
+        if (isMusicOn == true) {
+             $(".music-switch").attr("src", "/web/img/music-off.jpg");
+               $("#bg-music").get(0).pause();
+               $(".music-switch").removeClass('play');
+            isMusicOn = false;
+        }else {
+              $(".music-switch").attr("src", "/web/img/music-on.jpg");
+                $("#bg-music").get(0).play();
+                $(".music-switch").addClass('play');
+               isMusicOn = true;
+        }
+
+    });
+});
+
 

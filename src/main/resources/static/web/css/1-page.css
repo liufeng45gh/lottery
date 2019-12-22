@@ -136,3 +136,10 @@
      text-decoration-line: none;
 }
 
+.music-switch {
+    width: 3.0rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+}
+

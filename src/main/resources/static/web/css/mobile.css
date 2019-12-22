@@ -184,14 +184,7 @@ body {
 }
 
 
-#music {
-    position: absolute;
-    width: 2.48rem;
-    height: 2.48rem;
-    right: 1.2rem;
-    top: 1.7rem;
-    z-index: 50000;
-}
+
 
 #music.play {
   -webkit-animation:myfirst1 5s linear infinite;

@@ -17,6 +17,7 @@
 
 
     <script src="/web/js/common.js"></script>
+    <script src="/web/js/jquery.touchClick.js"></script>
     <script src="/web/js/jquery.rotate.min.js"></script>
     <style>
 

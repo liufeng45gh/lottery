@@ -24,7 +24,7 @@ function startRotate(){
 
                 setTimeout(function() {
                     showReward(ranInteger);
-                },10000);
+                },5000);
             }else {
                 layer.msg("系统错误",{icon: 5});
                 rotateIntervalId = null;

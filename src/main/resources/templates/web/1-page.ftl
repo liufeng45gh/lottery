@@ -14,6 +14,6 @@
     <img class="loading" id="start-btn" src="/web/img/page1/loading.png"/>
     -->
 
-
+    <img class="music-switch play" id="music" src="/web/img/music-on.jpg"/>
 
 </div>

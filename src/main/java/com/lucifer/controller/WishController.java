@@ -39,6 +39,6 @@ public class WishController {
 
     @GetMapping(value = "/wish/list")
     public List<Wish> wishList(){
-        return wishMapper.getWishNewList();
+        return wishMapper.getWishNewShowList();
     }
 }

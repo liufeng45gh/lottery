@@ -28,5 +28,14 @@ public class CmsLotteryController {
         return "/cms/reward/list";
     }
 
+    @RequestMapping(value="/cms/reward/day-list",method = RequestMethod.GET)
+    public String dayList(HttpServletRequest request){
+        List<String> dayList = awardMapper.getAwardDayList();
+                //new ArrayList<>();
+
+        request.setAttribute("dayList",dayList);
+        return "/cms/reward/day-list";
+    }
+
 
 }

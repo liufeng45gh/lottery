@@ -88,4 +88,8 @@
         where ma.award_id = #{awardId}
         order by ma.id
     </select>
+
+    <select id="getAwardDayList" resultType="java.lang.String">
+        select id from award_day order by id
+    </select>
 </mapper>

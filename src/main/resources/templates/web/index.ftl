@@ -50,10 +50,10 @@
     <source src="/music/happy.mp3" />
 </audio>
 <!-- Initialize Swiper -->
-<script src="/web/js/myslideup.js?v=1.1"></script>
-<script src="/web/js/index.js?v=1.1"></script>
-<script src="/web/js/wish.js?v=1.1"></script>
-<script src="/web/js/lottery.js?v=1.1"></script>
+<script src="/web/js/myslideup.js?v=1.2"></script>
+<script src="/web/js/index.js?v=1.2"></script>
+<script src="/web/js/wish.js?v=1.2"></script>
+<script src="/web/js/lottery.js?v=1.2"></script>
 
 </body>
 </html>

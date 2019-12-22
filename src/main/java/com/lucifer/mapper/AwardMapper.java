@@ -14,6 +14,8 @@ public interface AwardMapper {
 
     String getAwardDay(@Param(value = "id") String id);
 
+    List<String> getAwardDayList();
+
     List<AwardDayConfig> getAwardDayConfigList(@Param(value = "day") String day);
 
     Integer getAwardDayCount(@Param(value = "day") String day,@Param(value = "configId") Integer configId);
@@ -35,6 +37,8 @@ public interface AwardMapper {
     Integer insertTotalAwardCount(@Param(value = "configId") Integer configId,@Param(value = "count")Integer count);
 
     List<Member> rewardList(@Param(value = "awardId") Integer awardId);
+
+
 
 
 }

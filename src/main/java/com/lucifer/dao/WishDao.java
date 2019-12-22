@@ -16,4 +16,8 @@ public class WishDao extends IBatisBaseDao {
     public List<Wish> getWishNewList(){
         return this.sqlSession.selectList("getWishNewList");
     }
+
+    public List<Wish> getWishNewShowList(){
+        return this.sqlSession.selectList("getWishNewShowList");
+    }
 }

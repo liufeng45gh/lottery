@@ -35,7 +35,8 @@ function showProcess(process){
 var intervalId = null;
 //页面 ready 完成开始显示进度条加载效果
 $(document).ready(function(){
-    intervalId = setInterval(increaseProcess,500)
+    intervalId = setInterval(increaseProcess,500);
+    $("#bg-music").get(0).play();
 });
 
 function createSwiper(){
@@ -70,9 +71,9 @@ function doLoadFinish(){
 function toInitPage(){
     swiper.slideTo(1);
     loadWishList();
-    var mp3 = "/music/happy.mp3";
-    var audio = new Audio(mp3);
-    audio.play();
+//    var mp3 = "/music/happy.mp3";
+//    var audio = new Audio(mp3);
+//    audio.play();
 }
 
 $(document).ready(function(){

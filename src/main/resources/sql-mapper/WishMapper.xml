@@ -23,5 +23,13 @@
         order by w.id desc limit 20
     </select>
 
+    <select id="getWishNewShowList"  resultMap="WishMap">
+        select w.id,w.text,w.member_id,m.nick_name from wish w
+        left outer join member m
+        on w.member_id = m.id
+        where is_show = 1
+        order by w.id desc limit 20
+    </select>
+
 
 </mapper>

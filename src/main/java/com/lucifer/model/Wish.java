@@ -15,5 +15,7 @@ public class Wish {
 
     String text;
 
+    Integer isShow;
+
     Date createdAt;
 }

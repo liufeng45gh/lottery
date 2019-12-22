@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class CmsRewardController {
+public class CmsLotteryController {
 
     @Resource
     AwardMapper awardMapper;
@@ -27,4 +27,6 @@ public class CmsRewardController {
         request.setAttribute("rewardList",rewardList);
         return "/cms/reward/list";
     }
+
+
 }

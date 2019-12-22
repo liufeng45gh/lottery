@@ -1,7 +1,7 @@
 package com.lucifer.controller;
 
-import com.lucifer.dao.WishDao;
 import com.lucifer.exception.NotLoginException;
+import com.lucifer.mapper.WishMapper;
 import com.lucifer.model.Wish;
 import com.lucifer.service.WxService;
 import com.lucifer.utils.Result;
@@ -18,7 +18,7 @@ public class WishController {
     WxService wxService;
 
     @Resource
-    WishDao wishDao;
+    WishMapper wishMapper;
 
     @PostMapping(value = "/wish/commit")
     public Result put(@RequestParam String text, @CookieValue(value = "token",required = false) String token) throws NotLoginException {
@@ -33,12 +33,12 @@ public class WishController {
         wish.setText(text);
         Long memberId = Long.valueOf(userId);
         wish.setMemberId(memberId);
-        wishDao.insertWish(wish);
+        wishMapper.insertWish(wish);
         return Result.ok();
     }
 
     @GetMapping(value = "/wish/list")
     public List<Wish> wishList(){
-        return wishDao.getWishNewList();
+        return wishMapper.getWishNewList();
     }
 }

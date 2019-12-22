@@ -15,7 +15,7 @@
 
                 <div id="admin_right">
                 			<div class="content_box" style="border:none">
-                			<div class="position"><span>会员</span><span>&gt;</span><span>会员管理</span><span>&gt;</span><span>中奖列表</span></div>
+                			<div class="position"><span>会员</span><span>&gt;</span><span>lottery</span><span>&gt;</span><span>中奖列表</span></div>
 
                          <#list rewardList as memberList>
                          <div class="position" style="margin-top:20px;"><span>${memberList_index + 1} 等奖中奖结果</span></div>

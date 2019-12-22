@@ -5,6 +5,7 @@
     <div class="panel-body">
         <ul class="tree tree-lines" >
             <li  id="left_menu_welcome"><a href="/cms/reward/list?page=1" >中奖结果列表</a> </li>
+            <li  id="left_menu_wish"><a href="/cms/reward/wish-list?page=1" >祝福列表</a> </li>
         </ul>
     </div>
 

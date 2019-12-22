@@ -38,6 +38,13 @@
         select id from award_day where id = #{id}
     </select>
 
+    <insert id="insertAwardDay">
+        insert into award_day (id)  values (#{id})
+    </insert>
+    <delete id="deleteAwardDay">
+        delete from award_day where id = #{id}
+    </delete>
+
     <select id="getAwardDayConfigList" resultMap="AwardDayConfigMap">
         select * from award_day_config where day = #{day}
     </select>

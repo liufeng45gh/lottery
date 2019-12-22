@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/web/css/3-page.css"/>
+<link rel="stylesheet" href="/web/css/3-page.css?v=1.0"/>
 
 <div class="page-bg-3">
 

@@ -14,6 +14,10 @@ public interface AwardMapper {
 
     String getAwardDay(@Param(value = "id") String id);
 
+    Integer insertAwardDay(@Param(value = "id") String id);
+
+    Integer deleteAwardDay(@Param(value = "id") String id);
+
     List<String> getAwardDayList();
 
     List<AwardDayConfig> getAwardDayConfigList(@Param(value = "day") String day);

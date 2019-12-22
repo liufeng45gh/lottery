@@ -20,7 +20,7 @@
                                 <div class="search f_l">
                                     <form  action="/cms/reward/day-add" method="post">
                                         增加日期 (格式 :  yyyy-MM-dd)
-                                        <input class="small" name="status" type="text" value="${(param.status)!}"/>
+                                        <input class="small" name="day" type="text" />
 
 
                                         <button class="btn" type="submit">增 加</button>
@@ -70,7 +70,7 @@
 			$("#left_menu_day").addClass("selected");
 		});
 	</script>
-<script type="text/javascript" charset="UTF-8" src="/cms/script/lottery/wish.js"></script>
+<script type="text/javascript" charset="UTF-8" src="/cms/script/lottery/day-list.js"></script>
 
 
 <div style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background: rgb(255, 255, 255);"></div></body></html>

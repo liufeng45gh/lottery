@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>官微三周年 寻找幸福的你</title>
+    <title>官微三周年 寻找幸运的你</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
 
     <!-- Link Swiper's CSS -->

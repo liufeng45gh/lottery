@@ -55,7 +55,7 @@ $(window).on("load",function(){
     if (processCurrent < 80 ){
         setTimeout(doLoadFinish,10000);
     }else {
-        setTimeout(doLoadFinish,5000);
+        setTimeout(doLoadFinish,3000);
         //doLoadFinish();
     }
 });

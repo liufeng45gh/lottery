@@ -8,7 +8,7 @@ if(lineLink.indexOf("?") != -1)
 }
 
 var shareContent = "一起来玩吧";
-var shareTitle = "官微三周年 寻找幸福的你";
+var shareTitle = "官微三周年 寻找幸运的你";
 var shareImgUrl = "http://question.stack.xin/web/img/share-icon.png";
 var appid = "wx1b792045969d2147";
   

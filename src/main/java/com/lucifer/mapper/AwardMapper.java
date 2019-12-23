@@ -22,6 +22,8 @@ public interface AwardMapper {
 
     List<AwardDayConfig> getAwardDayConfigList(@Param(value = "day") String day);
 
+    List<AwardDayConfig> getAllAwardDayConfigList();
+
     Integer getAwardDayCount(@Param(value = "day") String day,@Param(value = "configId") Integer configId);
 
     Integer countAwardDayCount(@Param(value = "day") String day,@Param(value = "configId") Integer configId);

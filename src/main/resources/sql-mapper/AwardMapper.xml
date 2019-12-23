@@ -48,6 +48,10 @@
     <select id="getAwardDayConfigList" resultMap="AwardDayConfigMap">
         select * from award_day_config where day = #{day}
     </select>
+
+    <select id="getAllAwardDayConfigList" resultMap="AwardDayConfigMap">
+        select * from award_day_config order by day , config_id
+    </select>
     
     <select id="getAwardDayCount" resultType="java.lang.Integer">
         select a.count from award_day_count a where a.day = #{day} and config_id = #{configId}

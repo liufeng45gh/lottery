@@ -1,6 +1,7 @@
 package com.lucifer.controller.cms;
 
 import com.lucifer.mapper.AwardMapper;
+import com.lucifer.model.AwardDayConfig;
 import com.lucifer.utils.Result;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,6 +52,16 @@ public class CmsLotteryController {
     public Result dayDelete(HttpServletRequest request,@RequestParam String day){
         awardMapper.deleteAwardDay(day);
         return Result.ok() ;
+    }
+
+    @RequestMapping(value="/cms/reward/day-config-list",method = RequestMethod.GET)
+    public String dayConfigList(HttpServletRequest request){
+        List<AwardDayConfig> awardDayConfigList = awardMapper.getAllAwardDayConfigList();
+                //awardMapper.getAwardDayList();
+        //new ArrayList<>();
+
+        request.setAttribute("awardDayConfigList",awardDayConfigList);
+        return "/cms/reward/day-config-list";
     }
 
 }

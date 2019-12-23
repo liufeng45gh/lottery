@@ -80,7 +80,7 @@ public class LotteryService {
 
         Long count = this.incrementMemberLotteryCount(memberId);
         if (count>3) {
-            //throw  new AwardException(Constant.Award_Times_Limit_Exceed);
+            throw  new AwardException(Constant.Award_Times_Limit_Exceed);
         }
 
         List<AwardDayConfig> awardDayConfigList = awardMapper.getAwardDayConfigList(dayString);

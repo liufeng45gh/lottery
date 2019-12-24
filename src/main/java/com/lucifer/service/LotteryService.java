@@ -155,7 +155,7 @@ public class LotteryService {
         if (updateCount == 0) {
             awardMapper.insertDayAwardCount(day,configId,1);
         }
-        Integer totalCount = awardMapper.countAwardDayCount(day,configId);
+        Integer totalCount = awardMapper.countAwardTotalCount(configId);
 
         updateCount = awardMapper.updateTotalAwardCount(configId,totalCount);
         if (updateCount == 0){

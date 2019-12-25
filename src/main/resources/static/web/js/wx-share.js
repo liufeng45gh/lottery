@@ -13,7 +13,7 @@ var shareImgUrl = "http://question.stack.xin/web/img/share-icon.png";
 var appid = "wx1b792045969d2147";
   
 $(document).ready(function() {
-    checkLogin();
+    //checkLogin();
 })
 
 function loadWxConfig(){

@@ -48,7 +48,7 @@
 
 
 <audio id="bg-music" controls="controls" loop="loop" autoplay="autoplay"  style="width:0px;height:0px;visibility:hidden;">
-    <source src="/music/happy.mp3" />
+    <source src="${resource['/music/happy.mp3']!''}" />
 </audio>
 <!-- Initialize Swiper -->
 <script src="/web/js/myslideup.js?v=1.2"></script>

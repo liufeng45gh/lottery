@@ -1,5 +1,6 @@
 package com.lucifer.controller;
 
+import com.lucifer.config.ImageConfig;
 import com.lucifer.enumeration.Award;
 import com.lucifer.exception.AwardException;
 import com.lucifer.exception.NotLoginException;
@@ -34,7 +35,8 @@ public class LotteryController {
     LotteryService lotteryService;
 
     @GetMapping("/")
-    public String index(){
+    public String index(HttpServletRequest request){
+        request.setAttribute("resource", ImageConfig.resource);
         return "/web/index";
     }
 

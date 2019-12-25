@@ -2,8 +2,8 @@
 
 <div class="page-bg-2">
 
-<img class="wish-loop-bg" src="/web/img/page2/wish-loop-bg.png"/>
-<img class="b2-5" src="/web/img/page2/b2-5.png"/>
+<img class="wish-loop-bg" src="${resource['/web/img/page2/wish-loop-bg.png']!''}"/>
+<img class="b2-5" src="${resource['/web/img/page2/b2-5.png']!''}"/>
 
 
 <ul class="line" id="wish-list">
@@ -17,11 +17,11 @@
     <li >简易的点击展开/关闭效果(原生JS版和JQ版)</li>
     -->
 </ul>
-<img class="p2-title" src="/web/img/page2/p2-title.png"/>
-<img class="baby" src="/web/img/page2/baby.gif"/>
-<img class="wish-input-bg" src="/web/img/page2/wish-input.png"/>
+<img class="p2-title" src="${resource['/web/img/page2/p2-title.png']!''}"/>
+<img class="baby" src="${resource['/web/img/page2/baby.gif']!''}"/>
+<img class="wish-input-bg" src="${resource['/web/img/page2/wish-input.png']!''}"/>
 <input class="wish-input" id="wish-input" placeholder="点击输入祝福"/>
-<img class="p2-submit" id="p2-submit" src="/web/img/page2/p2-submit.png"/>
+<img class="p2-submit" id="p2-submit" src="${resource['/web/img/page2/p2-submit.png']!''}"/>
 
 
 

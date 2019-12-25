@@ -91,7 +91,7 @@
     </insert>
 
     <select id="rewardList" resultMap="MemberMap">
-        select ma.id,m.wx_id,m.nick_name,m.avatar,m.real_name,ma.created_at
+        select ma.id,m.wx_id,m.nick_name,m.phone,m.avatar,m.real_name,ma.created_at
         from member_award ma
         left outer join
         member m

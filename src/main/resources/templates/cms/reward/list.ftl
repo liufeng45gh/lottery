@@ -47,7 +47,7 @@
                                         <td>${(user.realName)!}</td>
 
 
-                                        <td>${(user.createdAt)!?datetime} </td>
+                                        <td>${(user.createdAt)?string('yyyy-MM-dd hh:mm:ss')} </td>
 
 
                                     </tr>
